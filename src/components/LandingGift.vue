@@ -6,7 +6,7 @@
       <div class="gift-block">
         <h2 class="sub-title">A gift you will appreciate</h2>
         <div class="gift-img">
-          <img src="/src/assets/gift.png" alt="gift" />
+          <img src="/src/assets/images/gift.png" alt="gift" />
         </div>
         <div class="gift-description">
           <div class="title">3-Day Free trial</div>
@@ -19,10 +19,10 @@
               href="https://apps.apple.com/cl/app/vpn-asap-best-secure-fast/id6477047407"
               target="_blank"
               class="download-button"
-              ><img src="/src/assets/app-store.png" class="app-store" alt="apple store"
+              ><img src="/src/assets/images/app-store.png" class="app-store" alt="apple store"
             /></a>
             <a href="#" class="download-button"
-              ><img src="/src/assets/google-store.png" class="app-store" alt="google store"
+              ><img src="/src/assets/images/google-store.png" class="app-store" alt="google store"
             /></a>
           </div>
         </div>

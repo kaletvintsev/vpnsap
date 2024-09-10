@@ -4,7 +4,7 @@
   <div class="first-block">
     <div class="container">
       <div class="mobile-logo">
-        <img src="/src/assets/logo-mobile.png" alt="Logo" />
+        <img src="/src/assets/images/logo-mobile.png" alt="Logo" />
       </div>
       <div class="description-block">
         <div class="text-block">
@@ -23,16 +23,24 @@
               href="https://apps.apple.com/cl/app/vpn-asap-best-secure-fast/id6477047407"
               target="_blank"
               class="download-button"
-              ><img src="/src/assets/app-store.png" class="app-store" alt="apple store"
+              ><img src="/src/assets/images/app-store.png" class="app-store" alt="apple store"
             /></a>
             <a href="#" class="download-button"
-              ><img src="/src/assets/google-store.png" class="app-store" alt="google store"
+              ><img src="/src/assets/images/google-store.png" class="app-store" alt="google store"
             /></a>
           </div>
         </div>
         <div class="phone-block">
-          <img class="phone-1" src="/src/assets/iphone-14-pro-1.png" alt="iPhone display 1" />
-          <img class="phone-2" src="/src/assets/iphone-14-pro-2.png" alt="iPhone display 2" />
+          <img
+            class="phone-1"
+            src="/src/assets/images/iphone-14-pro-1.png"
+            alt="iPhone display 1"
+          />
+          <img
+            class="phone-2"
+            src="/src/assets/images/iphone-14-pro-2.png"
+            alt="iPhone display 2"
+          />
         </div>
 
         <p class="text-mobile-description">

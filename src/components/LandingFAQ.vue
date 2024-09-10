@@ -24,8 +24,8 @@
                   class="item-title"
                   :class="{ 'item-arrow-top': item.expanded, 'item-arrow-bottom': !item.expanded }"
                 >
-                  <img v-if="!item.expanded" src="/src/assets/arrow-bottom.png" alt="arrow-bottom" />
-                  <img v-if="item.expanded" src="/src/assets/arrow-top.png" alt="arrow-top" />
+                  <img v-if="!item.expanded" src="/src/assets/images/arrow-bottom.png" alt="arrow-bottom" />
+                  <img v-if="item.expanded" src="/src/assets/images/arrow-top.png" alt="arrow-top" />
                 </div>
               </div>
               <div v-if="item.expanded" class="item-faq-description" v-html="item.answer"></div>
