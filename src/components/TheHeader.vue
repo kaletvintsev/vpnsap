@@ -14,7 +14,7 @@ function scrollToTop() {
 <template>
   <header class="header">
     <div class="logo">
-      <img src="assets/logo-header.png" alt="Logo" />
+      <img src="/src/assets/logo-header.png" alt="Logo" />
     </div>
     <nav class="menu">
       <ul>
