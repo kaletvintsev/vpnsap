@@ -29,4 +29,54 @@ function scrollToTop() {
   </header>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.header {
+  width: 100%;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .menu {
+    display: flex;
+    align-items: center;
+
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: inline;
+        margin-left: 40px;
+        font-size: 14px;
+        font-weight: 500;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        a {
+          color: rgba(255, 255, 255, 0.4);
+          text-decoration: none;
+          transition: color 0.3s;
+          cursor: pointer;
+          font-weight: 500;
+          font-style: normal;
+
+          &:hover {
+            color: rgba(255, 255, 255, 0.6);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .header {
+    display: none;
+  }
+}
+</style>

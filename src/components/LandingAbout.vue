@@ -79,3 +79,110 @@
     </div>
   </div>
 </template>
+<style lang="scss" scoped>
+.section-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0 100px 0;
+  background: #092620;
+
+  h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.64);
+  }
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    color: #ffffff;
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .about-description {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 40px;
+
+    .description-block-position {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+      padding: 0 10px 10px;
+
+      .description-block {
+        background: rgba(0, 0, 0, 0.16);
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 12px;
+        height: 190px;
+
+        .header {
+          display: flex;
+          justify-content: space-between;
+          font-size: 16px;
+          font-weight: 500;
+          width: 100%;
+          color: #ffffff;
+        }
+
+        p {
+          margin-top: 50px;
+          color: rgba(255, 255, 255, 0.64);
+          line-height: 1.2;
+          margin-bottom: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .section-about {
+    .about-description {
+      .description-block-position {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .section-about {
+    padding: 50px 0 50px 0;
+
+    .about-description {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column;
+      flex-wrap: unset;
+      width: 100%;
+
+      .description-block-position {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0;
+        width: 100%;
+
+        &:last-child {
+          padding-bottom: 0 !important;
+        }
+
+        .description-block {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+</style>

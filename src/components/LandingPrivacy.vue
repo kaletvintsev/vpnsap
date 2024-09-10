@@ -60,3 +60,86 @@
     </div>
   </div>
 </template>
+<style lang="scss" scoped>
+.section-working {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(315deg, #d0b336 0%, #f4d66c 100%);
+  padding: 50px 0 50px 0;
+
+  .working-block {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    flex-flow: column;
+
+    .sub-title {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 0.64);
+      text-align: center;
+    }
+
+    .title {
+      margin-top: 20px;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 42px;
+      color: #000000;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .working-item-block {
+      display: flex;
+      justify-content: start;
+      flex-flow: column;
+      margin-top: 20px;
+
+      .working-item {
+        display: flex;
+        justify-content: start;
+        flex-flow: row;
+        margin-bottom: 20px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .number {
+          width: 50px;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 32px;
+          color: #0a1614;
+        }
+
+        .description {
+          margin-left: 20px;
+
+          .item-title {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 32px;
+            color: #0a1614;
+          }
+
+          p {
+            margin-top: 15px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.2;
+            color: rgba(0, 0, 0, 0.64);
+            margin-bottom: 0 !important;
+            max-width: 500px;
+          }
+        }
+      }
+    }
+  }
+}
+</style>

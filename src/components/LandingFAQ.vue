@@ -35,3 +35,98 @@
     </div>
   </div>
 </template>
+<style lang="scss" scoped>
+.section-faq {
+  display: flex;
+  justify-content: center;
+  background: #092620;
+  padding: 50px 0 50px 0;
+
+  .faq-block {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    flex-flow: column;
+
+    .sub-title {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.64);
+      text-align: center;
+    }
+
+    .title {
+      margin-top: 20px;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 42px;
+      color: #ffffff;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .faq-items-block {
+      display: flex;
+      justify-content: start;
+      flex-flow: column;
+      margin-top: 20px;
+      width: 100%;
+
+      .faq-item {
+        display: flex;
+        justify-content: start;
+        flex-flow: column;
+        margin-bottom: 10px;
+        padding: 25px;
+        background: rgba(0, 0, 0, 0.16);
+        border-radius: 20px;
+        cursor: pointer;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .item-header {
+          display: flex;
+          justify-content: space-between;
+          flex-flow: row;
+
+          .item-title {
+            color: #ffffff;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+          }
+
+          .item-arrow-top {
+            width: 18px;
+
+            img {
+              width: 18px;
+            }
+          }
+
+          .item-arrow-bottom {
+            width: 18px;
+            opacity: 0.4;
+            img {
+              width: 18px;
+            }
+          }
+        }
+        .item-faq-description {
+          margin-top: 20px;
+          color: rgba(255, 255, 255, 0.64);
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 1.8;
+        }
+      }
+    }
+  }
+}
+</style>
