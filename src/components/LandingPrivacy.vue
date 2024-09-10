@@ -134,7 +134,7 @@
             font-size: 14px;
             line-height: 1.2;
             color: rgba(0, 0, 0, 0.64);
-            margin-bottom: 0 !important;
+            margin-bottom: 0;
             max-width: 500px;
           }
         }

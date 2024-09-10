@@ -138,7 +138,7 @@
           margin-top: 50px;
           color: rgba(255, 255, 255, 0.64);
           line-height: 1.2;
-          margin-bottom: 0 !important;
+          margin-bottom: 0;
         }
       }
     }
@@ -175,7 +175,7 @@
         width: 100%;
 
         &:last-child {
-          padding-bottom: 0 !important;
+          padding-bottom: 0;
         }
 
         .description-block {

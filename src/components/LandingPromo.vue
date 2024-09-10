@@ -4,7 +4,7 @@
   <div class="first-block">
     <div class="container">
       <div class="mobile-logo">
-        <img src="/src/assets/images/logo-mobile.png" alt="Logo" />
+        <img src="/src/assets/images/logo-mobile.png" alt="ASAP VPN" />
       </div>
       <div class="description-block">
         <div class="text-block">
@@ -57,8 +57,10 @@
 .first-block {
   display: flex;
   background-size: cover;
+  margin-top: Calc(var(--header-height)*-1);
+  padding-top: var(--header-height);
   background:
-    url('../assets/world-map.png') no-repeat center 60px,
+    url('/src/assets/images/world-map.png') no-repeat center 60px,
     linear-gradient(315deg, #d0b336 0%, #f4d66c 100%);
   width: 100%;
 
@@ -148,6 +150,7 @@
       background-size: 100px 100px;
       justify-content: center;
       align-items: center;
+      
 
       img {
         margin-left: -5px;
@@ -192,20 +195,13 @@
   .mobile-logo {
     display: none;
     position: relative;
-    width: 100px;
-    height: 100px;
-    background:
-      url('../assets/logo-bg.png') no-repeat center 0,
-      rgba(237, 207, 97, 80);
-    background-blend-mode: color-dodge;
-    background-size: 100px 100px;
+    width: 220px;
+    height: 226px;
     justify-content: center;
     align-items: center;
-    margin: 20px auto;
-
+    margin: auto;
     img {
-      margin-left: -5px;
-      max-width: 68px;
+      margin: 60px auto;
     }
   }
 }
@@ -215,9 +211,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background:
-      url('../assets/world-map.png') no-repeat center -100px,
-      linear-gradient(315deg, #d0b336 0%, #f4d66c 100%);
+    // background:
+    //   url('../assets/world-map.png') no-repeat center -100px,
+    //   linear-gradient(315deg, #d0b336 0%, #f4d66c 100%);
 
     .description-block {
       justify-content: center;
@@ -231,7 +227,7 @@
         width: 100%;
         max-width: 100%;
         text-align: center;
-        margin-top: 0 !important;
+        margin-top: 0;
 
         .title {
           font-size: 42px;
@@ -256,7 +252,7 @@
         .phone-1 {
           position: absolute;
           width: 280px;
-          z-index: 999;
+          z-index: 2;
           margin-left: -200px;
         }
 
@@ -277,7 +273,7 @@
       display: none;
     }
     .mobile-logo {
-      display: flex;
+      display: grid;
     }
   }
 

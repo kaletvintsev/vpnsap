@@ -12,9 +12,9 @@ function scrollToTop() {
 </script>
 
 <template>
-  <header class="header">
+  <header class="header container">
     <div class="logo">
-      <img src="/src/assets/images/logo-header.png" alt="Logo" />
+      <img src="/src/assets/images/logo-header.png" alt="Logo" width="255" height="55"/>
     </div>
     <nav class="menu">
       <ul>
@@ -32,9 +32,11 @@ function scrollToTop() {
 <style lang="scss" scoped>
 .header {
   width: 100%;
-  padding-top: 50px;
+  padding-top: 32px;
+  height: var(--header-height);
+  background-color: transparent;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
   .menu {
@@ -58,8 +60,7 @@ function scrollToTop() {
         }
 
         a {
-          color: rgba(255, 255, 255, 0.4);
-          text-decoration: none;
+          color: rgba(0, 0, 0, 0.4);
           transition: color 0.3s;
           cursor: pointer;
           font-weight: 500;

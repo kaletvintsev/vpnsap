@@ -146,7 +146,7 @@
   .section-gift {
     .gift-block {
       .gift-description {
-        padding: 0 20px 50px 20px !important;
+        padding: 0 20px 50px 20px;
       }
     }
   }
