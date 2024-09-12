@@ -5,15 +5,15 @@ import AppButtons from './AppButtons.vue'
 <template>
   <div ref="gift" class="section-gift container">
     <div class="gift-block">
-      <h2 class="subtitle">A gift you will appreciate</h2>
+      <duv class="subtitle">A gift you will appreciate</duv>
       <div class="gift-img">
         <img src="/src/assets/images/gift.png" alt="gift" />
       </div>
-      <div class="title">3-Day Free trial</div>
-      <div class="description">
+      <h2 class="title">3-Day Free trial</h2>
+      <p class="description">
         VPN ASAP is truly an excellent service. You have 7 days to use all the possibilities 100%.
         Experience it for yourself at no cost by downloading it for all your devices.
-      </div>
+      </p>
       <AppButtons />
     </div>
   </div>
@@ -29,91 +29,66 @@ import AppButtons from './AppButtons.vue'
 }
 
 .gift-block {
-  max-width: 1000px;
-  margin: 0 24px;
-  padding-top: 50px ;
-  padding-bottom: 32px;
-  background: linear-gradient(180deg, #18352b 0%, #152d23 100%);
-  border-radius: 20px;
   display: flex;
   flex-direction: column;
-  text-align: center;
   align-items: center;
+  max-width: 1000px;
+  margin: 0 24px;
+  padding-top: 50px;
+  padding-bottom: 32px;
+  background-color: #18352b;
+  background-image: linear-gradient(180deg, #18352b 0%, #152d23 100%);
+  border-radius: 20px;
+
+  @media only screen and (max-width: 992px) {
+    text-align: center;
+  }
+  @media only screen and (min-width: 993px) {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0 36px;
+    padding: 50px 0;
+    padding-right: 70px;
+  }
 }
 
 .gift-img {
   width: 300px;
+  margin-bottom: -1.5em;
+
+  @media only screen and (min-width: 993px) {
+    grid-column: 1/2;
+    grid-row: 1/6;
+  }
 }
-//   .sub-title {
-//     text-transform: uppercase;
-//     color: rgba(255, 255, 255, 0.64);
-//     font-style: normal;
-//   }
 
-//   .title {
-//     color: #ffffff;
-//     font-style: normal;
-//     font-weight: 700;
-//     font-size: 32px;
-//     margin-top: 20px;
-//   }
+.subtitle {
+  margin-bottom: -1em;
+  @media only screen and (min-width: 993px) {
+    margin-bottom: 24px;
+    text-align: left;
+  }
+}
 
-//   .description {
-//     margin-top: 40px;
-//     color: rgba(255, 255, 255, 0.64);
-//     font-style: normal;
-//     font-weight: 400;
-//     line-height: 1.6;
-//   }
-// }
+.title {
+  font-size: clamp(30px, 3.3em, 52px);
+  line-height: 42px;
+  margin-bottom: 30px;
+  @media only screen and (min-width: 993px) {
+    margin-bottom: 24px;
+    text-align: left;
+  }
+}
 
-//   @media only screen and (max-width: 992px) {
-//     .section-gift {
-//       padding: 20px 0 20px 0;
-
-//       .gift-block {
-//         max-width: 100%;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         flex-flow: column;
-
-//         .sub-title-mobile {
-//           display: block;
-//         }
-
-//         .gift-img {
-//           width: auto;
-
-//           img {
-//             width: 300px;
-//           }
-//         }
-
-//         .gift-description {
-//           width: 100%;
-//           padding: 0 50px 50px 50px;
-//           display: flex;
-//           flex-flow: column;
-//           margin-left: 0;
-//           text-align: center;
-
-//           .sub-title {
-//             display: none;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-// @media only screen and (max-width: 480px) {
-//   .section-gift {
-//     .gift-block {
-//       .gift-description {
-//         padding: 0 20px 50px 20px;
-//       }
-//     }
-//   }
-// }
+.description {
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.64);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.6;
+  max-width: 480px;
+  @media only screen and (max-width: 992px) {
+    padding: 0 25px;
+  }
+}
 </style>
