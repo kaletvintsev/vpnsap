@@ -3,79 +3,53 @@
 <template>
   <div ref="about" class="section-about">
     <div class="container">
-      <h2>ABOUT VPN ASAP</h2>
-      <div class="title">Yes, we know exactly what VPN is needed for:</div>
-      <div class="about-description">
-        <div class="description-block-position">
-          <div class="description-block">
-            <div class="header">
-              <div>Connection Security</div>
-              <div>01</div>
-            </div>
-            <p>The service employs encryption protocols to secure data transmission.</p>
-          </div>
-        </div>
-        <div class="description-block-position">
-          <div class="description-block">
-            <div class="header">
-              <div>Censorship Prevention</div>
-              <div>02</div>
-            </div>
-            <p>
-              Mentioning the prevention of censorship, the service help users bypass restrictions
-              imposed by certain networks or countries.
-            </p>
-          </div>
-        </div>
-        <div class="description-block-position">
-          <div class="description-block">
-            <div class="header">
-              <div>Privacy Enhancement</div>
-              <div>03</div>
-            </div>
-            <p>
-              Users can expect increased privacy while browsing, as their internet traffic is
-              encrypted and routed through a secure server.
-            </p>
-          </div>
-        </div>
-        <div class="description-block-position">
-          <div class="description-block">
-            <div class="header">
-              <div>Access to Restricted Content</div>
-              <div>04</div>
-            </div>
-            <p>
-              The service allow users to access content that might be restricted or censored in
-              their geographical location.
-            </p>
-          </div>
-        </div>
-        <div class="description-block-position">
-          <div class="description-block">
-            <div class="header">
-              <div>Commitment to Professionalism</div>
-              <div>05</div>
-            </div>
-            <p>
-              By stating the goal of being "easy and professional”, the service aims to provide a
-              high level of service with a user-friendly interface.
-            </p>
-          </div>
-        </div>
-        <div class="description-block-position">
-          <div class="description-block">
-            <div class="header">
-              <div>Data Protection</div>
-              <div>06</div>
-            </div>
-            <p>
-              Users can be assured that their online activities are shielded from potential
-              surveillance or tracking.
-            </p>
-          </div>
-        </div>
-      </div>
+      <h2 class="title">
+        Yes,<br />
+        we know exactly what VPN is needed for:
+      </h2>
+      <ul class="reasons">
+        <li class="reason reason--active">
+          <h3 class="reason-title">Connection Security</h3>
+          <p class="reason-text">
+            The service employs encryption protocols to secure data transmission.
+          </p>
+        </li>
+        <li class="reason">
+          <h3 class="reason-title">Censorship Prevention</h3>
+          <p class="reason-text">
+            Mentioning the prevention of censorship, the service helps users bypass restrictions
+            imposed by certain networks or countries.
+          </p>
+        </li>
+        <li class="reason">
+          <h3 class="reason-title">Privacy Enhancement</h3>
+          <p class="reason-text">
+            Users can expect increased privacy while browsing, as their internet traffic is
+            encrypted and routed through a secure server.
+          </p>
+        </li>
+        <li class="reason">
+          <h3 class="reason-title">Access to Restricted Content</h3>
+          <p class="reason-text">
+            The service allows users to access content that might be restricted or censored in their
+            geographical location.
+          </p>
+        </li>
+        <li class="reason">
+          <h3 class="reason-title">Commitment to Professionalism</h3>
+          <p class="reason-text">
+            By stating the goal of being "easy and professional,” the service aims to provide a high
+            level of service with a user-friendly interface.
+          </p>
+        </li>
+        <li class="reason">
+          <h3 class="reason-title">Data Protection</h3>
+          <p class="reason-text">
+            Users can be assured that their online activities are shielded from potential
+            surveillance or tracking.
+          </p>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -84,105 +58,59 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 100px 0 100px 0;
+  padding: 60px 0;
   background: #092620;
+  color: rgba(255, 255, 255, 1);
+}
 
-  h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.64);
+.title {
+  font-size: 32px;
+  width: 8em;
+  margin: auto;
+  line-height: 1.2;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.reasons {
+  font-family: Onest;
+  line-height: 1.5;
+  letter-spacing: -2%;
+}
+
+.reason {
+  list-style: none;
+  display: grid;
+  align-items: baseline;
+  gap: 14px 20px;
+  grid-template-columns: auto 1fr;
+  opacity: 0.5;
+  transition: all 0.7s;
+
+  &--active,
+  &:hover {
+    color: rgba(234, 175, 3, 1);
+    opacity: 1;
   }
-  .title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-    color: #ffffff;
-    font-size: 32px;
-    line-height: 1.2;
-    font-weight: 700;
-    text-align: center;
-  }
 
-  .about-description {
-    display: flex;
-    justify-content: start;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-top: 40px;
-
-    .description-block-position {
-      flex: 0 0 33.33%;
-      max-width: 33.33%;
-      padding: 0 10px 10px;
-
-      .description-block {
-        background: rgba(0, 0, 0, 0.16);
-        margin-top: 20px;
-        padding: 20px;
-        border-radius: 12px;
-        height: 190px;
-
-        .header {
-          display: flex;
-          justify-content: space-between;
-          font-size: 16px;
-          font-weight: 500;
-          width: 100%;
-          color: #ffffff;
-        }
-
-        p {
-          margin-top: 50px;
-          color: rgba(255, 255, 255, 0.64);
-          line-height: 1.2;
-          margin-bottom: 0;
-        }
-      }
-    }
+  &::before {
+    content: '0' counter(list-item) '.';
+    counter-increment: list-item;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -1%;
   }
 }
 
-@media only screen and (max-width: 1200px) {
-  .section-about {
-    .about-description {
-      .description-block-position {
-        flex: 0 0 50%;
-        max-width: 50%;
-      }
-    }
-  }
+.reason-text {
+  grid-column: 2/-1;
+  opacity: 0.7;
 }
 
-@media only screen and (max-width: 992px) {
-  .section-about {
-    padding: 50px 0 50px 0;
-
-    .about-description {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-flow: column;
-      flex-wrap: unset;
-      width: 100%;
-
-      .description-block-position {
-        flex: 0 0 100%;
-        max-width: 100%;
-        padding: 0;
-        width: 100%;
-
-        &:last-child {
-          padding-bottom: 0;
-        }
-
-        .description-block {
-          width: 100%;
-        }
-      }
-    }
-  }
+.reason-title {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -1%;
 }
 </style>
