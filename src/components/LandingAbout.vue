@@ -8,7 +8,7 @@
         we know exactly what VPN is needed for:
       </h2>
       <ul class="reasons">
-        <li class="reason reason--active">
+        <li class="reason">
           <h3 class="reason-title">Connection Security</h3>
           <p class="reason-text">
             The service employs encryption protocols to secure data transmission.
@@ -55,31 +55,43 @@
 </template>
 <style lang="scss" scoped>
 .section-about {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 60px 0;
   background: #092620;
   color: rgba(255, 255, 255, 1);
 }
 
+.container {
+  display: flex;
+  gap: 40px 100px;
+  justify-content: center;
+  @media only screen and (max-width: 992px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .title {
-  font-size: 32px;
+  font-size: clamp(32px, 3.5vw, 52px);
   width: 8em;
-  margin: auto;
-  line-height: 1.2;
+  line-height: 1.4;
   font-weight: 700;
-  text-align: center;
-  margin-bottom: 40px;
+  letter-spacing: -4%;
+
+  @media only screen and (max-width: 992px) {
+    text-align: center;
+  }
 }
 
 .reasons {
-  font-family: Onest;
+  display: grid;
+  gap: 40px;
   line-height: 1.5;
   letter-spacing: -2%;
+  max-width: 716px;
 }
 
 .reason {
+  cursor: default;
   list-style: none;
   display: grid;
   align-items: baseline;
@@ -106,6 +118,7 @@
 .reason-text {
   grid-column: 2/-1;
   opacity: 0.7;
+  margin: 0;
 }
 
 .reason-title {
