@@ -41,6 +41,8 @@
   justify-content: center;
   background: #092620;
   padding: 50px 0 50px 0;
+  color: #ffffff;
+
 
   .faq-block {
     display: flex;
@@ -60,12 +62,6 @@
 
     .title {
       margin-top: 20px;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 42px;
-      color: #ffffff;
-      text-align: center;
-      line-height: 1.2;
     }
 
     .faq-items-block {

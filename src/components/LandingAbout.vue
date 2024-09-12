@@ -73,9 +73,6 @@
 .title {
   font-size: clamp(32px, 3.5vw, 52px);
   width: 8em;
-  line-height: 1.4;
-  font-weight: 700;
-  letter-spacing: -4%;
 
   @media only screen and (max-width: 992px) {
     text-align: center;

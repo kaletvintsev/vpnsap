@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import AppButtons from './AppButtons.vue'
+</script>
 
 <template>
   <footer class="footer">
@@ -50,20 +52,7 @@
                 ><img src="/src/assets/images/social-in.svg" alt="LinkedIn"
               /></a>
             </div>
-            <div class="button-block">
-              <a
-                href="https://apps.apple.com/cl/app/vpn-asap-best-secure-fast/id6477047407"
-                target="_blank"
-                class="download-button"
-                ><img src="/src/assets/images/app-store.png" class="app-store" alt="apple store"
-              /></a>
-              <a href="#" target="_blank" class="download-button"
-                ><img
-                  src="/src/assets/images/google-store.png"
-                  class="app-store"
-                  alt="google store"
-              /></a>
-            </div>
+            <AppButtons />
           </div>
         </div>
       </div>
@@ -120,7 +109,6 @@
         a {
           font-style: normal;
           font-weight: 500;
-          font-size: 16px;
           color: #ffffff;
           text-decoration: none;
           margin-bottom: 15px;
@@ -156,17 +144,7 @@
           }
         }
 
-        .button-block {
-          margin-top: 20px;
 
-          .download-button {
-            width: 100%;
-
-            &:nth-child(2) {
-              margin-left: 15px;
-            }
-          }
-        }
       }
     }
   }

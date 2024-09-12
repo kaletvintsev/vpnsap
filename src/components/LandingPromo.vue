@@ -11,7 +11,7 @@ import AppButtons from './AppButtons.vue'
       <div class="image-wrapper"></div>
 
       <div class="description-block">
-        <h1 class="title">
+        <h1 class="promo-title">
           Surf fast.<br />
           Talk secure.<br />
           Stay anonymous.
@@ -104,7 +104,7 @@ import AppButtons from './AppButtons.vue'
   }
 }
 
-.title {
+.promo-title {
   font-size: clamp(40px, 5.5vw, 64px);
   font-weight: 900;
   line-height: 0.95;
