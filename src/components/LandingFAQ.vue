@@ -57,7 +57,12 @@ const FAQItems: FAQ[] = [
       <h2 class="subtitle">FREQUENTLY ASKED QUESTIONS</h2>
       <div class="title">Looking for answers?<br />You're in the right place!</div>
       <div class="faq-items-block">
-        <LandingFAQItem v-for="item in FAQItems" :key="item.question" :question="item" />
+        <LandingFAQItem
+          v-for="item in FAQItems"
+          :key="item.question"
+          :question="item"
+          class="item"
+        />
       </div>
     </div>
   </div>
@@ -74,7 +79,6 @@ const FAQItems: FAQ[] = [
   display: flex;
   justify-content: start;
   align-items: center;
-  width: 100%;
   flex-flow: column;
 }
 
@@ -87,8 +91,11 @@ const FAQItems: FAQ[] = [
 
 .faq-items-block {
   display: flex;
-  justify-content: start;
   flex-flow: column;
-  gap: 8px;
+  gap: 8px 19px;
+  @media only screen and (min-width: 993px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 </style>

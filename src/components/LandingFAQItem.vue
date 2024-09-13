@@ -23,14 +23,14 @@ const isOpen = ref(false)
 <style lang="scss" scoped>
 .faq-item {
   display: flex;
-  justify-content: start;
   flex-flow: column;
   padding: 16px 20px;
   border-radius: 20px;
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0.32);
   cursor: pointer;
-  max-height: 10em;
+  height: min-content;
+  max-height: 8em;
   transition: max-height 0.4s;
 
   &:last-child {
@@ -39,6 +39,8 @@ const isOpen = ref(false)
 
   &--open {
     max-height: 800em;
+    transition: max-height 0.6s;
+
   }
 }
 
@@ -46,6 +48,7 @@ const isOpen = ref(false)
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 40px;
 }
 .item-title {
   font-size: 20px;
@@ -53,6 +56,7 @@ const isOpen = ref(false)
   line-height: 28px;
   letter-spacing: -0.04em;
 }
+
 
 .arrow--closed {
   opacity: 0.4;
