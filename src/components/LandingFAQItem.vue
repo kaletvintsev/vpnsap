@@ -10,16 +10,17 @@ const isOpen = ref(false)
 </script>
 
 <template>
-  <div @click="isOpen = !isOpen" class="faq-item" :class="{ 'faq-item--open': isOpen }">
+  <div @click="isOpen = !isOpen" class="faq-item">
     <div class="item-header">
       <div class="item-title">{{ question.question }}</div>
-      <IconArrow :is-open="isOpen" :class="{ 'arrow--closed': !isOpen }" />
+      <IconArrow :is-open="isOpen" class="arrow" :class="{ 'arrow--closed': !isOpen }" />
     </div>
     <Transition>
       <div v-show="isOpen" class="item-faq-description" v-html="question.answer"></div>
     </Transition>
   </div>
 </template>
+
 <style lang="scss" scoped>
 .faq-item {
   display: flex;
@@ -30,17 +31,9 @@ const isOpen = ref(false)
   background-color: rgba(0, 0, 0, 0.32);
   cursor: pointer;
   height: min-content;
-  max-height: 8em;
-  transition: max-height 0.4s;
 
   &:last-child {
     margin-bottom: 0;
-  }
-
-  &--open {
-    max-height: 800em;
-    transition: max-height 0.6s;
-
   }
 }
 
@@ -57,10 +50,13 @@ const isOpen = ref(false)
   letter-spacing: -0.04em;
 }
 
-
-.arrow--closed {
-  opacity: 0.4;
+.arrow {
+  min-width: 18px;
+  &--closed {
+    opacity: 0.4;
+  }
 }
+
 .item-faq-description {
   color: rgba(255, 255, 255, 0.64);
   font-size: 14px;
@@ -72,11 +68,14 @@ const isOpen = ref(false)
 
 .v-enter-active,
 .v-leave-active {
-  transition: opacity 0.5s ease;
+  transition: all 0.8s ease;
+  max-height: 999px;
 }
 
 .v-enter-from,
 .v-leave-to {
   opacity: 0;
+  max-height: 0;
+  transition: all 0.4s ease;
 }
 </style>

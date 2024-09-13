@@ -29,6 +29,21 @@ const FAQItems: FAQ[] = [
       'VPNASAP is a privacy-focused company that does not store activity logs or connection logs of our users. VPNASAP does collect minimal information about the usage of our services in order to identify and address technical issues, but this information cannot be used to connect you to any specific activity or behavior.'
   },
   {
+    question: 'My Registration is Private?',
+    answer: 'Yes, we don’t have or collect any user information so all is Private.'
+  },
+  {
+    question: 'Why Use ASAP Private Messenger?',
+    answer:
+      "End-to-end encryption keeps your conversations secure. We can't read your messages or listen to your calls, and no one else can either. Privacy isn’t an optional mode — it’s just the way that ASAP works."
+  },
+  {
+    question:
+      'What does it mean when Messenger says messages are secured with end-to-end encryption?',
+    answer:
+      "he content of your messages  in an end-to-end encrypted chat is protected from the moment it leaves your device to the moment it reaches the receiver's device. This means that nobody during this delivery, including ASAP, can see to what's sent."
+  },
+  {
     question: 'Is VPNASAP safe?',
     answer:
       'Yes! VPNASAP takes numerous measures to ensure your VPN connection is safe and secure: <ul><li>IP masking using server locations around the world</li><li>Industry-standard 256-bit AES encryption</li><li>Network Lock (kill switch) for superior leak protection</li><li>•No activity logs and no connection logs</li><li>Private, encrypted DNS on every server</li><li>Perfect forward secrecy for future-proofed privacy. Besides these standard features, VPNASAP has a dedicated team of security engineers working to constantly upgrade our network and apps to address new threats to your privacy.</li></ul>'
@@ -90,12 +105,16 @@ const FAQItems: FAQ[] = [
 }
 
 .faq-items-block {
-  display: flex;
-  flex-flow: column;
-  gap: 8px 19px;
   @media only screen and (min-width: 993px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    columns: 2;
+    column-gap: 19px;
   }
+}
+
+.item {
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  margin-bottom: 8px;
 }
 </style>
