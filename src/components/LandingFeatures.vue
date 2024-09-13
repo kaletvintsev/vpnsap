@@ -1,11 +1,7 @@
 <script setup lang="ts">
+import type { Feature } from '@/interfaces';
 import LandingFeaturesCard from './LandingFeaturesCard.vue'
 
-interface Feature {
-  imgName: string
-  title: string
-  description: string
-}
 const features: Feature[] = [
   {
     imgName: 'speed.png',

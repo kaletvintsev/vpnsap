@@ -1,11 +1,8 @@
 <script setup lang="ts">
+import type { Feature } from '@/interfaces';
 import { computed } from 'vue';
 
-interface Feature {
-  imgName: string
-  title: string
-  description: string
-}
+
 const props = defineProps<{
   feature: Feature
 }>()

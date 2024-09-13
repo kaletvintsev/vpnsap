@@ -1,36 +1,63 @@
 <script setup lang="ts">
-// function toggleItem(index) {
-//   faqItems.forEach((item, i) => {
-//     if (i === index) {
-//       item.expanded = !item.expanded
-//     } else {
-//       item.expanded = false
-//     }
-//   })
-// }
+import type { FAQ } from '@/interfaces'
+import LandingFAQItem from './LandingFAQItem.vue'
+
+const FAQItems: FAQ[] = [
+  {
+    question: 'What can I do with a VPN?',
+    answer:
+      'A VPN is a multi-purpose digital survival tool. You can use your VPN to: <ul><li>Hide your real IP address and surf the web with added privacy</li><li>Protect your confidential information (such as online banking credentials or social media passwords) through VPN encryption</li><li>Unblock and access your favorite websites and social media platforms</li><li>Stream and download anything securely, anonymously, and with no limits</li><li>Get discounts when you shop online</li></ul>'
+  },
+  {
+    question: 'Is VPN ASAP free?',
+    answer:
+      'No. VPNASAP is a premium VPN service, although a <b>free trial</b> is available for certain mobile devices.'
+  },
+  {
+    question: 'How do I cancel my subscription?',
+    answer:
+      'For instructions on canceling your subscription just email as at hello@vpnasap.com or cancel it via your apple id/google pay subscription manager.'
+  },
+  {
+    question: 'How many IPs do you have?',
+    answer:
+      'VPNASAP has thousands of servers in dozens of locations around the globe. Each location can have hundreds of servers, with each server containing thousands of IPs.  VPNASAP does not specify the number of available IPs because that may change depending on demand and other factors.'
+  },
+  {
+    question: 'Do you log my data?',
+    answer:
+      'VPNASAP is a privacy-focused company that does not store activity logs or connection logs of our users. VPNASAP does collect minimal information about the usage of our services in order to identify and address technical issues, but this information cannot be used to connect you to any specific activity or behavior.'
+  },
+  {
+    question: 'Is VPNASAP safe?',
+    answer:
+      'Yes! VPNASAP takes numerous measures to ensure your VPN connection is safe and secure: <ul><li>IP masking using server locations around the world</li><li>Industry-standard 256-bit AES encryption</li><li>Network Lock (kill switch) for superior leak protection</li><li>•No activity logs and no connection logs</li><li>Private, encrypted DNS on every server</li><li>Perfect forward secrecy for future-proofed privacy. Besides these standard features, VPNASAP has a dedicated team of security engineers working to constantly upgrade our network and apps to address new threats to your privacy.</li></ul>'
+  },
+  {
+    question: 'Why should I choose VPNASAP over other VPN providers?',
+    answer:
+      'VPNASAP runs a premium VPN network optimized for quickness and reliability. Enjoy unlimited bandwidth and your choice of servers in dozens of countries around the world. VPNASAP has built the best network and VPN apps in the industry. Still not convinced? VPNASAP comes with a 30-day money-back guarantee on all plans, so you can try the best VPN service available with zero risk.'
+  },
+  {
+    question: 'Does VPNASAP throttle my connection?',
+    answer:
+      'No. With VPNASAP, there is <b>no monthly data cap</b> and <b>no ISP service throttling.</b>'
+  },
+  {
+    question: 'I still have questions. How can I contact live chat support?',
+    answer:
+      'For any other questions, or for any issues you have encountered, please contact us at hello@vpnasap.com'
+  }
+]
 </script>
 
 <template>
   <div ref="faq" class="section-faq">
-    <div class="container">
-      <div class="faq-block">
-        <h2 class="sub-title">FREQUENTLY ASKED QUESTIONS</h2>
-        <div class="title">Looking for answers?<br />You're in the right place!</div>
-        <!-- <div v-for="(item, index) in faqItems" :key="index" class="faq-items-block">
-            <div @click="toggleItem(index)" class="faq-item">
-              <div class="item-header">
-                <div class="item-title">{{ item.question }}</div>
-                <div
-                  class="item-title"
-                  :class="{ 'item-arrow-top': item.expanded, 'item-arrow-bottom': !item.expanded }"
-                >
-                  <img v-if="!item.expanded" src="/src/assets/images/arrow-bottom.png" alt="arrow-bottom" />
-                  <img v-if="item.expanded" src="/src/assets/images/arrow-top.png" alt="arrow-top" />
-                </div>
-              </div>
-              <div v-if="item.expanded" class="item-faq-description" v-html="item.answer"></div>
-            </div>
-          </div> -->
+    <div class="container faq-block">
+      <h2 class="subtitle">FREQUENTLY ASKED QUESTIONS</h2>
+      <div class="title">Looking for answers?<br />You're in the right place!</div>
+      <div class="faq-items-block">
+        <LandingFAQItem v-for="item in FAQItems" :key="item.question" :question="item" />
       </div>
     </div>
   </div>
@@ -40,89 +67,28 @@
   display: flex;
   justify-content: center;
   background: #092620;
-  padding: 50px 0 50px 0;
+  padding: 60px 24px;
   color: #ffffff;
+}
+.faq-block {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  flex-flow: column;
+}
 
+.subtitle {
+  margin-bottom: 30px;
+}
+.title {
+  margin-bottom: 50px;
+}
 
-  .faq-block {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    width: 100%;
-    flex-flow: column;
-
-    .sub-title {
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.64);
-      text-align: center;
-    }
-
-    .title {
-      margin-top: 20px;
-    }
-
-    .faq-items-block {
-      display: flex;
-      justify-content: start;
-      flex-flow: column;
-      margin-top: 20px;
-      width: 100%;
-
-      .faq-item {
-        display: flex;
-        justify-content: start;
-        flex-flow: column;
-        margin-bottom: 10px;
-        padding: 25px;
-        background: rgba(0, 0, 0, 0.16);
-        border-radius: 20px;
-        cursor: pointer;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-
-        .item-header {
-          display: flex;
-          justify-content: space-between;
-          flex-flow: row;
-
-          .item-title {
-            color: #ffffff;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 18px;
-          }
-
-          .item-arrow-top {
-            width: 18px;
-
-            img {
-              width: 18px;
-            }
-          }
-
-          .item-arrow-bottom {
-            width: 18px;
-            opacity: 0.4;
-            img {
-              width: 18px;
-            }
-          }
-        }
-        .item-faq-description {
-          margin-top: 20px;
-          color: rgba(255, 255, 255, 0.64);
-          font-style: normal;
-          font-weight: 400;
-          font-size: 14px;
-          line-height: 1.8;
-        }
-      }
-    }
-  }
+.faq-items-block {
+  display: flex;
+  justify-content: start;
+  flex-flow: column;
+  gap: 8px;
 }
 </style>
