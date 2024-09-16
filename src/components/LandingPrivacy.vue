@@ -72,13 +72,15 @@
 }
 
 .subtitle {
-  max-width: 200px;
   margin-bottom: 30px;
+  @media only screen and (max-width: 992px) {
+    max-width: 200px;
+  }
 }
 
 .title {
   line-height: 1.4;
-  margin-bottom: 50px;
+  margin-bottom: 36px;
   max-width: 564px;
 }
 
@@ -90,6 +92,11 @@
   &:last-of-type {
     margin-bottom: 50px;
   }
+
+  @media only screen and (min-width: 993px) {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .privacy-list {
@@ -98,7 +105,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: clamp(8px, 0.7em, 20px);
+  gap: clamp(8px, 2vw, 20px);
 }
 
 .item {

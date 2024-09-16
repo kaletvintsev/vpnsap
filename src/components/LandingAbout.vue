@@ -74,8 +74,8 @@
   font-size: clamp(32px, 3.5vw, 52px);
   width: 8em;
 
-  @media only screen and (max-width: 992px) {
-    text-align: center;
+  @media only screen and (min-width: 993px) {
+    text-align: left;
   }
 }
 

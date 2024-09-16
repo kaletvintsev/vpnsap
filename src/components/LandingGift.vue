@@ -26,6 +26,9 @@ import AppButtons from './AppButtons.vue'
   align-items: center;
   padding: 60px 0;
   color: white;
+  @media only screen and (min-width: 993px) {
+    padding: 100px 0;
+  }
 }
 
 .gift-block {
