@@ -67,7 +67,7 @@ const FAQItems: FAQ[] = [
 </script>
 
 <template>
-  <div ref="faq" class="section-faq">
+  <div class="section-faq">
     <div class="container faq-block">
       <h2 class="subtitle">FREQUENTLY ASKED QUESTIONS</h2>
       <div class="title">Looking for answers?<br />You're in the right place!</div>

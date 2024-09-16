@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div ref="about" class="section-about">
+  <div class="section-about">
     <div class="container">
       <h2 class="title">
         Yes,<br />

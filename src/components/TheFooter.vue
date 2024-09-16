@@ -51,10 +51,16 @@ import SocialBlock from './SocialBlock.vue'
   @media only screen and (max-width: 992px) {
     margin-bottom: 68px;
   }
+  @media only screen and (min-width: 993px) {
+    max-width: Min(321px, 30vw);
+  }
 }
 
 .mobile-social {
   margin-bottom: 60px;
+  @media only screen and (min-width: 993px) {
+    display: none;
+  }
 }
 
 .app-buttons {
@@ -79,6 +85,7 @@ import SocialBlock from './SocialBlock.vue'
   display: flex;
   flex-flow: column;
   align-items: center;
+  margin: auto;
 
   @media only screen and (max-width: 992px) {
     margin-bottom: 40px;
@@ -102,8 +109,6 @@ import SocialBlock from './SocialBlock.vue'
 
 .second-menu-block {
   display: flex;
-  justify-content: end;
-  width: 50%;
 
   @media only screen and (max-width: 992px) {
     justify-content: center;

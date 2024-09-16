@@ -1,9 +1,8 @@
 <script setup lang="ts">
-function scrollTo(refName: string) {
-  const element = document.querySelector('[ref="' + refName + '"]')
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' })
-  }
+function scrollTo(id: string) {
+  const element = document.getElementById(id)
+  if (!element) return
+  element.scrollIntoView({ behavior: 'smooth' })
 }
 
 function scrollToTop() {
@@ -14,14 +13,14 @@ function scrollToTop() {
 <template>
   <header class="header container">
     <div class="logo">
-      <img src="/src/assets/images/logo-header.png" alt="Logo" width="255" height="55"/>
+      <img src="/src/assets/images/logo-header.png" alt="Logo" width="255" height="55" />
     </div>
     <nav class="menu">
       <ul>
         <li><a @click="scrollToTop()">Home</a></li>
         <li><a @click="scrollTo('about')">About</a></li>
         <li><a @click="scrollTo('gift')">Get app</a></li>
-        <li><a @click="scrollTo('futures')">Features</a></li>
+        <li><a @click="scrollTo('features')">Features</a></li>
         <li><a @click="scrollTo('faq')">FAQ</a></li>
         <li><a href="mailto:hello@vpnasap.com">Contact us</a></li>
       </ul>
@@ -60,11 +59,10 @@ function scrollToTop() {
         }
 
         a {
-          color: rgba(0, 0, 0, 0.4);
-          transition: color 0.3s;
+          color: inherit;
+          text-decoration: none;
           cursor: pointer;
-          font-weight: 500;
-          font-style: normal;
+          transition: color 0.3s;
 
           &:hover {
             color: rgba(255, 255, 255, 0.6);
@@ -75,9 +73,5 @@ function scrollToTop() {
   }
 }
 
-@media only screen and (max-width: 992px) {
-  .header {
-    display: none;
-  }
-}
+
 </style>

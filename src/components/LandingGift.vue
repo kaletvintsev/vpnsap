@@ -3,7 +3,7 @@ import AppButtons from './AppButtons.vue'
 </script>
 
 <template>
-  <div ref="gift" class="section-gift container">
+  <div class="section-gift container">
     <div class="gift-block">
       <duv class="subtitle">A gift you will appreciate</duv>
       <div class="gift-img">
