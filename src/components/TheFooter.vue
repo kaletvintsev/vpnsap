@@ -47,11 +47,11 @@ import SocialBlock from './SocialBlock.vue'
 
 .footer-logo {
   max-width: 321px;
-  align-self: start;
   @media only screen and (max-width: 992px) {
     margin-bottom: 68px;
   }
   @media only screen and (min-width: 993px) {
+    align-self: start;
     max-width: Min(321px, 30vw);
   }
 }

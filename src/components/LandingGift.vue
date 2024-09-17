@@ -74,7 +74,7 @@ import AppButtons from './AppButtons.vue'
 }
 
 .title {
-  font-size: clamp(30px, 3.3em, 52px);
+  font-size: clamp(30px, 5vw, 52px);
   line-height: 42px;
   margin-bottom: 30px;
   @media only screen and (min-width: 993px) {

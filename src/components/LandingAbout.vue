@@ -1,4 +1,39 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { onMounted, onBeforeUnmount } from 'vue'
+
+onMounted(() => {
+  if (window.matchMedia('(hover: hover)').matches) {
+    return
+  }
+  animateReasonsScroll()
+})
+function animateReasonsScroll() {
+  const reasons = document.querySelectorAll('.reason')
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reason--active')
+        } else {
+          entry.target.classList.remove('reason--active')
+        }
+      })
+    },
+    {
+      root: null,
+      threshold: 0.8,
+      rootMargin: '0px 0px -15% 0px'
+    }
+  )
+
+  reasons.forEach((reason) => observer.observe(reason))
+
+  onBeforeUnmount(() => {
+    reasons.forEach((reason) => observer.unobserve(reason))
+  })
+}
+</script>
 
 <template>
   <div class="section-about">
@@ -55,7 +90,7 @@
 </template>
 <style lang="scss" scoped>
 .section-about {
-  padding: 60px 0;
+  padding: 60px 12px;
   background: #092620;
   color: rgba(255, 255, 255, 1);
 }
@@ -85,6 +120,7 @@
   line-height: 1.5;
   letter-spacing: -2%;
   max-width: 716px;
+  padding: 0;
 }
 
 .reason {
@@ -101,6 +137,10 @@
   &:hover {
     color: rgba(234, 175, 3, 1);
     opacity: 1;
+  }
+
+  &--active {
+    transition-delay: 0.6s;
   }
 
   &::before {
