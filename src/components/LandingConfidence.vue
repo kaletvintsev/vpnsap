@@ -53,6 +53,7 @@ const features: Feature[] = [
   padding: 60px 0;
   color: rgba(255, 255, 255, 1);
   text-align: center;
+  max-width: 1380px;
 }
 
 .subtitle {
