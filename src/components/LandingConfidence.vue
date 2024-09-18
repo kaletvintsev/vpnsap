@@ -62,10 +62,6 @@ const features: Feature[] = [
 }
 
 .title {
-  // font-size: 40px;
-  // font-weight: 700;
-  // line-height: 1.12;
-  // letter-spacing: -0.04em;
   margin-bottom: 50px;
 }
 

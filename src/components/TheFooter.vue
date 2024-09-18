@@ -1,6 +1,9 @@
 <script setup lang="ts">
+import { useIsDesktop } from '@/composables/useIsDesktop'
 import AppButtons from './AppButtons.vue'
 import SocialBlock from './SocialBlock.vue'
+
+const { isDesktop } = useIsDesktop()
 </script>
 
 <template>
@@ -8,16 +11,16 @@ import SocialBlock from './SocialBlock.vue'
     <div class="menu-block">
       <div class="first-menu-block">
         <img src="/src/assets/images/logo-footer.png" alt="Logo footer" class="footer-logo" />
-        <SocialBlock class="mobile-social" />
+        <SocialBlock class="mobile-social" v-if="!isDesktop" />
         <div class="menu">
-          <a href="/terms">Terms of use</a>
-          <a href="/privacy">Privacy policy</a>
+          <RouterLink to="/terms">Terms of use</RouterLink>
+          <RouterLink to="/privacy">Privacy policy</RouterLink>
           <a href="mailto:hello@vpnasap.com">hello@vpnasap.com</a>
         </div>
       </div>
       <div class="second-menu-block">
         <div class="second-menu">
-          <SocialBlock class="desktop-social" />
+          <SocialBlock class="desktop-social" v-if="isDesktop" />
 
           <AppButtons class="app-buttons" />
         </div>
@@ -58,9 +61,6 @@ import SocialBlock from './SocialBlock.vue'
 
 .mobile-social {
   margin-bottom: 60px;
-  @media only screen and (min-width: 993px) {
-    display: none;
-  }
 }
 
 .app-buttons {
@@ -142,11 +142,5 @@ import SocialBlock from './SocialBlock.vue'
   font-size: 14px;
   margin-top: 80px;
   text-align: center;
-}
-
-.desktop-social {
-  @media only screen and (max-width: 992px) {
-    display: none;
-  }
 }
 </style>
