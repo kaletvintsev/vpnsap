@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import HeaderElement from '@/components/HeaderElement.vue';
+
 </script>
 
 <template>
+  <HeaderElement/>
   <main class="container">
     <h1 class="header-title">Privacy policy</h1>
     <p class="text-p">Privacy Policy</p>

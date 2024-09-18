@@ -147,7 +147,7 @@
   font-size: 20px;
   font-weight: 700;
   line-height: 28px;
-  letter-spacing: -4%;
+  letter-spacing: -0.04em;
   justify-content: space-between;
   margin-bottom: 60px;
 

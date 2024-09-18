@@ -37,41 +37,38 @@ function scrollToTop() {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.menu {
+  display: flex;
+  align-items: center;
 
-  .menu {
+  ul {
     display: flex;
-    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
-    ul {
-      display: flex;
-      list-style: none;
-      margin: 0;
-      padding: 0;
+    li {
+      display: inline;
+      margin-left: 40px;
+      font-size: 14px;
+      font-weight: 500;
 
-      li {
-        display: inline;
-        margin-left: 40px;
-        font-size: 14px;
-        font-weight: 500;
+      &:first-child {
+        margin-left: 0;
+      }
 
-        &:first-child {
-          margin-left: 0;
-        }
+      a {
+        color: inherit;
+        text-decoration: none;
+        cursor: pointer;
+        transition: color 0.3s;
 
-        a {
-          color: inherit;
-          text-decoration: none;
-          cursor: pointer;
-          transition: color 0.3s;
-
-          &:hover {
-            color: rgba(255, 255, 255, 0.6);
-          }
+        &:hover {
+          color: rgba(255, 255, 255, 0.6);
         }
       }
     }
   }
 }
-
-
 </style>

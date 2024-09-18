@@ -62,7 +62,6 @@ const isOpen = ref(false)
   font-size: 14px;
   font-weight: 500;
   line-height: 24px;
-  letter-spacing: -0.02em;
   padding-top: 16px;
 }
 

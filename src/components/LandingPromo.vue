@@ -118,7 +118,6 @@ import AppButtons from './AppButtons.vue'
 .text-description {
   font-weight: 600;
   line-height: 1.75;
-  letter-spacing: -0.02em;
   margin-bottom: 50px;
   max-width: 406px;
   @media only screen and (min-width: 993px) {

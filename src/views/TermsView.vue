@@ -1,7 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import HeaderElement from '@/components/HeaderElement.vue'
+</script>
 
 <template>
-  <div class="container">
+  <HeaderElement />
+  <main class="container">
     <h1 class="header-title">Terms of use</h1>
     <p class="text-p">ASAP (Seat Gate SRO Private Company) Terms &amp; Privacy Policy</p>
     <p class="text-p">
@@ -531,7 +534,7 @@
       not constitute a waiver of such right or provision, or be deemed to be a waiver of any
       subsequent breach or default.
     </p>
-  </div>
+  </main>
 </template>
 
 <style></style>

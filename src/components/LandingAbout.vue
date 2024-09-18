@@ -118,7 +118,6 @@ function animateReasonsScroll() {
   display: grid;
   gap: 40px;
   line-height: 1.5;
-  letter-spacing: -2%;
   max-width: 716px;
   padding: 0;
 }
@@ -148,7 +147,7 @@ function animateReasonsScroll() {
     counter-increment: list-item;
     font-size: 24px;
     font-weight: 600;
-    letter-spacing: -1%;
+    letter-spacing: -0.01em;
   }
 }
 
@@ -161,6 +160,6 @@ function animateReasonsScroll() {
 .reason-title {
   font-size: 24px;
   font-weight: 600;
-  letter-spacing: -1%;
+  letter-spacing: -0.01em;
 }
 </style>

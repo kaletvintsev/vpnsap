@@ -22,7 +22,14 @@ const router = createRouter({
       name: 'privacy',
       component: PrivacyView
     }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { top: 0 }
+    }
+  }
 })
 
 export default router

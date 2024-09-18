@@ -43,7 +43,6 @@ let imgURL = computed(() => `/src/assets/images/features/${props.feature.imgName
   font-size: 32px;
   font-weight: 500;
   line-height: 38px;
-  letter-spacing: -0.02em;
   max-width: 189px;
   margin-bottom: 24px;
   display: flex;
@@ -57,6 +56,5 @@ let imgURL = computed(() => `/src/assets/images/features/${props.feature.imgName
   font-size: 14px;
   font-weight: 500;
   line-height: 24px;
-  letter-spacing: -2%;
 }
 </style>
