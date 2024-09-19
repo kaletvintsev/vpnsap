@@ -26,9 +26,15 @@ const router = createRouter({
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
       return savedPosition
-    } else {
-      return { top: 0 }
     }
+
+    if (to.hash) {
+      const element = document.getElementById(to.hash.substring(1))
+      if (element) {
+        return { el: element, behavior: 'smooth' }
+      }
+    }
+    return { top: 0 }
   }
 })
 
