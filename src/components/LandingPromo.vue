@@ -35,6 +35,7 @@ import AppButtons from './AppButtons.vue'
     url('/src/assets/images/world-map.png') no-repeat center 60px,
     linear-gradient(315deg, #d0b336 0%, #f4d66c 100%);
   padding-top: 60px;
+  color: rgba(10, 22, 20, 1);
 
   @media screen and (min-width: 993px) {
     margin-top: Calc(var(--header-height) * -1);

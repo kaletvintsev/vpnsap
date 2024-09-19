@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import type { Feature } from '@/interfaces';
-import { computed } from 'vue';
-
+import type { Feature } from '@/interfaces'
+import { computed } from 'vue'
 
 const props = defineProps<{
   feature: Feature
@@ -12,7 +11,7 @@ let imgURL = computed(() => `/src/assets/images/features/${props.feature.imgName
 
 <template>
   <li class="feature">
-    <img class="image" :src="imgURL" :alt="feature.title">
+    <img class="image" :src="imgURL" :alt="feature.title" />
     <h3 class="feature-title">{{ feature.title }}</h3>
     <p class="feature-description" :innerHTML="feature.description"></p>
   </li>
@@ -43,13 +42,12 @@ let imgURL = computed(() => `/src/assets/images/features/${props.feature.imgName
   font-size: 32px;
   font-weight: 500;
   line-height: 38px;
-  max-width: 189px;
+  max-width: 195px;
   margin-bottom: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 
 .feature-description {
   color: rgba(255, 255, 255, 0.64);

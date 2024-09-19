@@ -30,6 +30,7 @@ function scrollToTop() {
 
 <style lang="scss" scoped>
 .header {
+  color: rgba(0, 0, 0, 0.4);
   width: 100%;
   padding-top: 32px;
   height: var(--header-height);

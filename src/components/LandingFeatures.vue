@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="section-working">
     <div class="container">
@@ -57,6 +55,7 @@
 </template>
 <style lang="scss" scoped>
 .section-working {
+  color: black;
   background-color: #f4d66c;
   background-image: linear-gradient(315deg, #d0b336 0%, #f4d66c 100%);
   padding: 60px 12px;
