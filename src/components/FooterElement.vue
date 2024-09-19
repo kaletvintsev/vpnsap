@@ -17,7 +17,9 @@ const { style = 'default' } = defineProps<Props>()
     <div class="container">
       <div class="menu-block">
         <div class="first-menu-block">
-          <img src="/src/assets/images/logo-footer.png" alt="Logo footer" class="footer-logo" />
+          <RouterLink to="/" class="footer-logo">
+            <img src="/src/assets/images/logo-footer.png" alt="Logo footer" />
+          </RouterLink>
           <SocialBlock class="mobile-social" v-if="!isDesktop" />
           <div class="menu">
             <RouterLink to="/terms">Terms of use</RouterLink>
@@ -61,6 +63,8 @@ const { style = 'default' } = defineProps<Props>()
 }
 
 .footer-logo {
+  display: flex;
+  align-items: center;
   max-width: 321px;
   @media only screen and (max-width: 992px) {
     margin-bottom: 68px;
