@@ -37,7 +37,7 @@ const FAQItems: FAQ[] = [
   {
     question: 'My Registration is Private?',
     answer: 'Yes, we don’t have or collect any user information so all is Private.'
-  },
+  }
   // {
   //   question: 'How many IPs do you have?',
   //   answer:
@@ -64,6 +64,14 @@ const FAQItems: FAQ[] = [
   //     'For any other questions, or for any issues you have encountered, please contact us at hello@vpnasap.com'
   // }
 ]
+
+const FAQItemsColumns = getColumns(FAQItems)
+
+function getColumns(FAQItems: FAQ[]) {
+  const middleElementIndex = Math.floor(FAQItems.length / 2)
+
+  return [FAQItems.slice(0, middleElementIndex + 1), FAQItems.slice(-middleElementIndex)]
+}
 </script>
 
 <template>
@@ -72,12 +80,22 @@ const FAQItems: FAQ[] = [
       <h2 class="subtitle">FREQUENTLY ASKED QUESTIONS</h2>
       <div class="title">Looking for answers?<br />You're in the right place!</div>
       <div class="faq-items-block">
-        <LandingFAQItem
-          v-for="item in FAQItems"
-          :key="item.question"
-          :question="item"
-          class="item"
-        />
+        <div class="first-column">
+          <LandingFAQItem
+            v-for="item in FAQItemsColumns[0]"
+            :key="item.question"
+            :question="item"
+            class="item"
+          />
+        </div>
+        <div class="second-column">
+          <LandingFAQItem
+            v-for="item in FAQItemsColumns[1]"
+            :key="item.question"
+            :question="item"
+            class="item"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -105,9 +123,11 @@ const FAQItems: FAQ[] = [
 }
 
 .faq-items-block {
+  display: grid;
+  gap: 19px;
+
   @media only screen and (min-width: 993px) {
-    columns: 2;
-    column-gap: 19px;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
