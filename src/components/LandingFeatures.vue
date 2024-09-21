@@ -108,36 +108,37 @@
 }
 
 .item {
+  position: relative;
   background-color: rgba(255, 255, 255, 0.16);
   padding: 22px;
   border-radius: 12px;
   max-width: 486px;
-  &:hover {
-    animation: gradientHover 0.3s forwards;
+  overflow: hidden;
+  z-index: 1;
+  > * {
+    position: relative;
+    z-index: 2;
   }
-}
-
-@keyframes gradientHover {
-  25% {
-    background-image: linear-gradient(
-      99.99deg,
-      rgba(255, 255, 255, 0.08) 0%,
-      rgba(255, 255, 255, 0.032) 100%
-    );
-  }
-  50% {
-    background-image: linear-gradient(
-      99.99deg,
-      rgba(255, 255, 255, 0.16) 0%,
-      rgba(255, 255, 255, 0.064) 100%
-    );
-  }
-  100% {
+  &::after {
+    opacity: 0;
+    position: absolute;
+    content: '';
     background-image: linear-gradient(
       99.99deg,
       rgba(255, 255, 255, 0.32) 0%,
       rgba(255, 255, 255, 0.128) 100%
     );
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 12px;
+    z-index: 1;
+    transition: opacity 0.9s ease;
+  }
+  &:hover::after {
+    opacity: 1;
   }
 }
 

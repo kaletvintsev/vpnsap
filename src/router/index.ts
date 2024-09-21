@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import PrivacyView from '../views/PrivacyView.vue'
 import TermsView from '@/views/TermsView.vue'
+import type { RouteLocationNormalized } from 'vue-router'
+import type { RouteLocationNormalizedLoaded } from 'vue-router'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,7 +25,11 @@ const router = createRouter({
       component: PrivacyView
     }
   ],
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior(
+    to: RouteLocationNormalized,
+    from: RouteLocationNormalizedLoaded,
+    savedPosition: { left: number; top: number } | null
+  ) {
     if (savedPosition) {
       return savedPosition
     }
@@ -34,6 +40,7 @@ const router = createRouter({
         return { el: element, behavior: 'smooth' }
       }
     }
+
     return { top: 0 }
   }
 })
