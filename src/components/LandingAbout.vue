@@ -132,14 +132,17 @@ function animateReasonsScroll() {
   opacity: 0.5;
   transition: all 0.7s;
 
-  &--active,
-  &:hover {
-    color: rgba(234, 175, 3, 1);
-    opacity: 1;
+  @media screen and (hover: hover) {
+    &:hover {
+      color: rgba(234, 175, 3, 1);
+      opacity: 1;
+    }
   }
 
   &--active {
     transition-delay: 0.6s;
+    color: rgba(234, 175, 3, 1);
+    opacity: 1;
   }
 
   &::before {

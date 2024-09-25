@@ -15,9 +15,11 @@ const isOpen = ref(false)
       <div class="item-title">{{ question.question }}</div>
       <IconArrow :is-open="isOpen" class="arrow" :class="{ 'arrow--closed': !isOpen }" />
     </div>
-    <Transition>
-      <div v-show="isOpen" class="item-faq-description" v-html="question.answer"></div>
-    </Transition>
+    <div
+      class="item-faq-description"
+      v-html="question.answer"
+      :class="{ 'item-faq-description--open': isOpen }"
+    ></div>
   </div>
 </template>
 
@@ -30,8 +32,6 @@ const isOpen = ref(false)
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0.32);
   cursor: pointer;
-  height: min-content;
-
   &:last-child {
     margin-bottom: 0;
   }
@@ -63,18 +63,34 @@ const isOpen = ref(false)
   font-weight: 500;
   line-height: 24px;
   padding-top: 16px;
-}
-
-.v-enter-active,
-.v-leave-active {
-  transition: all 0.8s ease;
-  max-height: 999px;
-}
-
-.v-enter-from,
-.v-leave-to {
   opacity: 0;
   max-height: 0;
-  transition: all 0.4s ease;
+  margin: -5px;
+  transition:
+    max-height 0.9s ease,
+    opacity 0.9s ease;
+
+  &--open {
+    opacity: 1;
+    max-height: 99em;
+    margin: 0;
+  }
 }
+
+// .v-enter-active,
+// .v-leave-active {
+//   max-height: 0;
+//   transition:
+//     transform 0.6s ease,
+//     opacity 0.6s ease,
+//     max-height 0.6s ease;
+//   transform-origin: top;
+// }
+
+// .v-enter-from,
+// .v-leave-to {
+//   transform: scaleY(0);
+//   opacity: 0;
+//   max-height: 99em;
+// }
 </style>
