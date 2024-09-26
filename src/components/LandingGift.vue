@@ -11,7 +11,7 @@ import AppButtons from './AppButtons.vue'
       </div>
       <h2 class="title">3-Day Free trial</h2>
       <p class="description">
-        VPN ASAP is truly an excellent service. You have 7 days to use all the possibilities 100%.
+        VPN ASAP is truly an excellent service. You have 3 days to use all the possibilities 100%.
         Experience it for yourself at no cost by downloading it for all your devices.
       </p>
       <AppButtons />

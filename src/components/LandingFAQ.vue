@@ -32,7 +32,7 @@ const FAQItems: FAQ[] = [
     question:
       'What does it mean when Messenger says messages are secured with end-to-end encryption?',
     answer:
-      "he content of your messages  in an end-to-end encrypted chat is protected from the moment it leaves your device to the moment it reaches the receiver's device. This means that nobody during this delivery, including ASAP, can see to what's sent."
+      "The content of your messages  in an end-to-end encrypted chat is protected from the moment it leaves your device to the moment it reaches the receiver's device. This means that nobody during this delivery, including ASAP, can see to what's sent."
   },
   {
     question: 'My Registration is Private?',
