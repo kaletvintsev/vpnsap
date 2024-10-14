@@ -26,6 +26,8 @@ import AppButtons from './AppButtons.vue'
   align-items: center;
   padding: 60px 0;
   color: white;
+  text-wrap: balance;
+
   @media only screen and (min-width: 993px) {
     padding: 100px 0;
   }

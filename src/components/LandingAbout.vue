@@ -95,6 +95,7 @@ function animateReasonsScroll() {
   padding: 60px 12px;
   background: #092620;
   color: rgba(255, 255, 255, 1);
+  text-wrap: balance;
 }
 
 .container {

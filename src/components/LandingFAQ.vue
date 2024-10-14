@@ -107,6 +107,7 @@ function getColumns(FAQItems: FAQ[]) {
   background: #092620;
   padding: 60px 24px;
   color: #ffffff;
+  text-wrap: balance;
 }
 .faq-block {
   display: flex;

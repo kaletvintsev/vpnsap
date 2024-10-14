@@ -106,6 +106,7 @@
   flex-wrap: wrap;
   gap: clamp(8px, 2vw, 20px);
   counter-reset: features-counter;
+  text-wrap: balance;
 }
 
 .item {
