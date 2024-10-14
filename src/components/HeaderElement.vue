@@ -22,7 +22,6 @@
 }
 .menu {
   display: flex;
-  align-items: center;
   margin: auto;
 
   ul {

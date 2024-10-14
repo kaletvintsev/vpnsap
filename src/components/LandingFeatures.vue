@@ -167,7 +167,8 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 22px;
-  letter-spacing: -2%;
+  letter-spacing: -0.02em;
   opacity: 0.64;
+  margin: 0;
 }
 </style>

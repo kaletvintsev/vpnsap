@@ -58,8 +58,10 @@ import AppButtons from './AppButtons.vue'
 .gift-img {
   width: 300px;
   margin-bottom: -1.5em;
+  transform: scale(1.15);
 
   @media only screen and (min-width: 993px) {
+    width: 350px;
     grid-column: 1/2;
     grid-row: 1/6;
   }
@@ -74,7 +76,7 @@ import AppButtons from './AppButtons.vue'
 }
 
 .title {
-  font-size: clamp(30px, 5vw, 52px);
+  font-size: clamp(30px, 4vw, 45px);
   line-height: 42px;
   margin-bottom: 30px;
   @media only screen and (min-width: 993px) {

@@ -40,8 +40,9 @@ const isOpen = ref(false)
 .item-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   gap: 40px;
+  margin-bottom: 10px;
 }
 .item-title {
   font-size: 20px;
@@ -62,7 +63,7 @@ const isOpen = ref(false)
   font-size: 14px;
   font-weight: 500;
   line-height: 24px;
-  padding-top: 16px;
+  padding-top: 0;
   opacity: 0;
   max-height: 0;
   margin: -5px;
@@ -74,6 +75,10 @@ const isOpen = ref(false)
     opacity: 1;
     max-height: 99em;
     margin: 0;
+    padding-top: 16px;
+    transition:
+    max-height 0.4s ease,
+    opacity 0.9s ease;
   }
 }
 </style>
