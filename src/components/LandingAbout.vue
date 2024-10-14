@@ -120,6 +120,7 @@ function animateReasonsScroll() {
   line-height: 1.5;
   max-width: 716px;
   padding: 0;
+  counter-reset: about-counter;
 }
 
 .reason {
@@ -146,8 +147,8 @@ function animateReasonsScroll() {
   }
 
   &::before {
-    content: '0' counter(list-item) '.';
-    counter-increment: list-item;
+    content: '0' counter(about-counter) '.';
+    counter-increment: about-counter;
     font-size: 24px;
     font-weight: 600;
     letter-spacing: -0.01em;

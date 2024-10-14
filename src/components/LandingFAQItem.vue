@@ -76,21 +76,4 @@ const isOpen = ref(false)
     margin: 0;
   }
 }
-
-// .v-enter-active,
-// .v-leave-active {
-//   max-height: 0;
-//   transition:
-//     transform 0.6s ease,
-//     opacity 0.6s ease,
-//     max-height 0.6s ease;
-//   transform-origin: top;
-// }
-
-// .v-enter-from,
-// .v-leave-to {
-//   transform: scaleY(0);
-//   opacity: 0;
-//   max-height: 99em;
-// }
 </style>

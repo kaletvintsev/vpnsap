@@ -105,6 +105,7 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: clamp(8px, 2vw, 20px);
+  counter-reset: features-counter;
 }
 
 .item {
@@ -152,8 +153,8 @@
   margin-bottom: 60px;
 
   &::after {
-    content: '0' counter(list-item);
-    counter-increment: list-item;
+    content: '0' counter(features-counter);
+    counter-increment: features-counter;
   }
 }
 

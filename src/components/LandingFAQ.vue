@@ -6,7 +6,7 @@ const FAQItems: FAQ[] = [
   {
     question: 'What can I do with a VPN?',
     answer:
-      'A VPN is a multi-purpose digital survival tool. You can use your VPN to: <ul><li>Hide your real IP address and surf the web with added privacy</li><li>Protect your confidential information (such as online banking credentials or social media passwords) through VPN encryption</li><li>Unblock and access your favorite websites and social media platforms</li><li>Stream and download anything securely, anonymously, and with no limits</li><li>Get discounts when you shop online</li></ul>'
+      'A VPN is a multi-purpose digital survival tool. You can use your VPN to: <ul><li>Hide your real IP address and surf the web with added privacy</li> <li>Protect your confidential information (such as online banking credentials or social media passwords) through VPN encryption</li> <li>Unblock and access your favorite websites and social media platforms</li> <li>Stream and download anything securely, anonymously, and with no limits</li> <li>Get discounts when you shop online</li></ul>'
   },
   {
     question: 'Is VPN ASAP free?',
@@ -16,27 +16,27 @@ const FAQItems: FAQ[] = [
   {
     question: 'How do I cancel my subscription?',
     answer:
-      'For instructions on canceling your subscription just email as at hello@vpnasap.com or cancel it via your apple id/google pay subscription manager.'
+      'For instructions on canceling your subscription just email as at hello@vpnasap.com or cancel it via your apple id/google pay subscription manager.'
   },
   {
     question: 'Do you log my data?',
     answer:
-      'VPNASAP is a privacy-focused company that does not store activity logs or connection logs of our users. VPNASAP does collect minimal information about the usage of our services in order to identify and address technical issues, but this information cannot be used to connect you to any specific activity or behavior.'
+      'VPNASAP is a privacy-focused company that does not store activity logs or connection logs of our users. VPNASAP does collect minimal information about the usage of our services in order to identify and address technical issues, but this information cannot be used to connect you to any specific activity or behavior.'
   },
   {
     question: 'Why Use ASAP Private Messenger?',
     answer:
-      "End-to-end encryption keeps your conversations secure. We can't read your messages or listen to your calls, and no one else can either. Privacy isn’t an optional mode — it’s just the way that ASAP works."
+      "End-to-end encryption keeps your conversations secure. We can’t read your messages or listen to your calls, and no one else can either. Privacy isn’t an optional mode — it’s just the way that ASAP works."
   },
   {
     question:
-      'What does it mean when Messenger says messages are secured with end-to-end encryption?',
+      'What does it mean when Messenger says messages are secured with end-to-end encryption?',
     answer:
-      "he content of your messages  in an end-to-end encrypted chat is protected from the moment it leaves your device to the moment it reaches the receiver's device. This means that nobody during this delivery, including ASAP, can see to what's sent."
+      "he content of your messages in an end-to-end encrypted chat is protected from the moment it leaves your device to the moment it reaches the receiver’s device. This means that nobody during this delivery, including ASAP, can see to what’s sent."
   },
   {
     question: 'My Registration is Private?',
-    answer: 'Yes, we don’t have or collect any user information so all is Private.'
+    answer: 'Yes, we don’t have or collect any user information so all is Private.'
   }
   // {
   //   question: 'How many IPs do you have?',
