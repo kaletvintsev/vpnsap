@@ -32,14 +32,18 @@ import AppButtons from './AppButtons.vue'
   background-size: cover;
   overflow: hidden;
   background:
-    url('/src/assets/images/world-map.png') no-repeat center 60px,
+    url('/src/assets/images/world-map.png') no-repeat center -140px,
     linear-gradient(315deg, #d0b336 0%, #f4d66c 100%);
   padding-top: 60px;
   color: rgba(10, 22, 20, 1);
+  text-wrap: balance;
 
   @media screen and (min-width: 993px) {
     margin-top: Calc(var(--header-height) * -1);
     padding-top: var(--header-height);
+    background:
+    url('/src/assets/images/world-map.png') no-repeat center 60px,
+    linear-gradient(315deg, #d0b336 0%, #f4d66c 100%);
   }
 }
 
@@ -94,7 +98,7 @@ import AppButtons from './AppButtons.vue'
 .description-block {
   display: flex;
   flex-direction: column;
-  padding: 50px 0 50px 0;
+  padding: 50px 0 70px 0;
   justify-content: center;
   @media only screen and (max-width: 992px) {
     text-align: center;

@@ -105,6 +105,8 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: clamp(8px, 2vw, 20px);
+  counter-reset: features-counter;
+  text-wrap: balance;
 }
 
 .item {
@@ -152,8 +154,8 @@
   margin-bottom: 60px;
 
   &::after {
-    content: '0' counter(list-item);
-    counter-increment: list-item;
+    content: '0' counter(features-counter);
+    counter-increment: features-counter;
   }
 }
 
@@ -166,7 +168,8 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 22px;
-  letter-spacing: -2%;
+  letter-spacing: -0.02em;
   opacity: 0.64;
+  margin: 0;
 }
 </style>

@@ -7,6 +7,7 @@ onMounted(() => {
   }
   animateReasonsScroll()
 })
+
 function animateReasonsScroll() {
   const reasons = document.querySelectorAll('.reason')
 
@@ -14,16 +15,17 @@ function animateReasonsScroll() {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
+          // Remove the active class from all reasons
+          reasons.forEach((reason) => reason.classList.remove('reason--active'))
+          // Add the active class only to the intersecting one
           entry.target.classList.add('reason--active')
-        } else {
-          entry.target.classList.remove('reason--active')
         }
       })
     },
     {
       root: null,
       threshold: 0.8,
-      rootMargin: '0px 0px -15% 0px'
+      rootMargin: '0px 0px -35% 0px'
     }
   )
 
@@ -93,6 +95,7 @@ function animateReasonsScroll() {
   padding: 60px 12px;
   background: #092620;
   color: rgba(255, 255, 255, 1);
+  text-wrap: balance;
 }
 
 .container {
@@ -120,6 +123,7 @@ function animateReasonsScroll() {
   line-height: 1.5;
   max-width: 716px;
   padding: 0;
+  counter-reset: about-counter;
 }
 
 .reason {
@@ -136,18 +140,24 @@ function animateReasonsScroll() {
     &:hover {
       color: rgba(234, 175, 3, 1);
       opacity: 1;
+      .reason-text {
+      opacity: 1;
+    }
     }
   }
 
   &--active {
-    transition-delay: 0.6s;
     color: rgba(234, 175, 3, 1);
     opacity: 1;
+
+    .reason-text {
+      opacity: 1;
+    }
   }
 
   &::before {
-    content: '0' counter(list-item) '.';
-    counter-increment: list-item;
+    content: '0' counter(about-counter) '.';
+    counter-increment: about-counter;
     font-size: 24px;
     font-weight: 600;
     letter-spacing: -0.01em;

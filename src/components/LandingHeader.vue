@@ -32,16 +32,14 @@ function scrollToTop() {
 .header {
   color: rgba(0, 0, 0, 0.4);
   width: 100%;
-  padding-top: 32px;
   height: var(--header-height);
   background-color: transparent;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  padding-top: 32px;
 }
 .menu {
   display: flex;
-  align-items: center;
 
   ul {
     display: flex;

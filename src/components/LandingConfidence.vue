@@ -6,25 +6,25 @@ const features: Feature[] = [
   {
     imgName: 'speed.png',
     title: 'Faster than fast',
-    description: 'Top-notch servers with super stable connection and speeds<br/> up to 10 Gbps'
+    description: 'Top-notch servers with super stable connection and speeds<br/> up to 10 Gbps'
   },
   {
     imgName: 'encryption.png',
     title: 'Totally encrypted',
     description:
-      'X25519 and AES encryption standards make your online activity unrecognizable to even the most prying eyes.'
+      'X25519 and AES encryption standards make your online activity unrecognizable to even the most prying eyes.'
   },
   {
     imgName: 'clean-story.png',
     title: 'Your story always clean',
     description:
-      'Auto-delete all traces you can make <br/>every 10 minutes. No tracking, no identifiers, no data storage'
+      'Auto-delete all traces you can make <br/>every 10 minutes. No tracking, no identifiers, no data storage'
   },
   {
     imgName: 'messenger.png',
     title: 'Private messenger',
     description:
-      'Talk freely without worry. Messages are secured with X25519 & AES encryption and a strong VPN connection'
+      'Talk freely without worry. Messages are secured with X25519 & AES encryption and a strong VPN connection'
   }
 ]
 </script>
@@ -54,6 +54,7 @@ const features: Feature[] = [
   color: rgba(255, 255, 255, 1);
   text-align: center;
   max-width: 1380px;
+  text-wrap: balance;
 }
 
 .subtitle {
@@ -63,6 +64,8 @@ const features: Feature[] = [
 
 .title {
   margin-bottom: 50px;
+  line-height: 1.12;
+
 }
 
 .features {
